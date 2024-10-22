@@ -261,6 +261,7 @@ extern STAILQ_HEAD(file_list_head, file_list) ftab;
 
 extern STAILQ_HEAD(files_name_head, files_name) fntab;
 
+extern int	compileir;
 extern int	debugging;
 extern int	found_defaults;
 
