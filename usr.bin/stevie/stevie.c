@@ -84,7 +84,7 @@ service_function(void *dummy __unused)
 		/*
 		 * Got a call, bump the counter and loop.
 		 */
-		printf("accepted, counter is %d\n", (int)buf);
+		printf("p1: cocall received: counter is %d\n", (int)buf);
 		buf++;
 	}
 }
@@ -120,12 +120,12 @@ main(int argc __unused, char **argv __unused)
 	/*
 	 * Do the thing a couple of times.
 	 */
-	for (i = 3; i > 0; i--) {
-		printf("calling %lp...\n", target);
+	for (i = 10; i > 0; i--) {
+		printf("p0: calling %lp...\n", target);
 		received = cocall(target, &buf, sizeof(buf), &buf, sizeof(buf));
 		if (received < 0)
 			err(1, "cocall");
-		printf("returned, counter is %d\n", (int)buf);
+		printf("p0: cocall returned: counter is %d\n", (int)buf);
 	}
 
 	/*

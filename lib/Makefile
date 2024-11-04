@@ -276,6 +276,7 @@ SUBDIR_PARALLEL=
 SUBDIR+=	libbinds
 SUBDIR+=	libclocks
 SUBDIR+=	libcs
+SUBDIR+=	libcolocatedstrace
 SUBDIR+=	libmalloc_simple
 SUBDIR+=	libpaths
 .endif

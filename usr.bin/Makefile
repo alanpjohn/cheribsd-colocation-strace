@@ -191,6 +191,8 @@ SUBDIR+= \
 	capv \
 	clearances \
 	clocks \
+	colocatedstrace \
+	helloworld \
 	colookup \
 	coping \
 	copong \

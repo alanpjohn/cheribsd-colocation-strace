@@ -1,0 +1,8 @@
+!sys/cheri/
+!sys/sys/
+!sys/riscv/cheri/
+!sys/amd64/cheri/
+!lib/
+!include/
+!usr.bin/cs
+**/*

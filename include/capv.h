@@ -59,7 +59,7 @@
 #define	CAPV_BINDS	10
 #define	CAPV_SYSCALL	12
 #define	CAPV_PATHS	14
-
+#define	CAPV_SYSCALL_LOG	16
 #include <sys/socket.h> // XXX binds
 #include <time.h> // XXX clocks
 
@@ -172,5 +172,14 @@ typedef union {
 	};
 } capv_paths_return_t;
 
-#endif /* !_CAPV_H_ */
+typedef union {
+	void * __capability aligner;
+	struct {
+		size_t	len;
+		int	op;
+		uintcap_t arg[8];
+		int result;
+	};
+} capv_syscall_log_t;
 
+#endif /* !_CAPV_H_ */

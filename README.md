@@ -1,3 +1,7 @@
+# CheriBSD Colocation powered Strace
+
+This git repo is a proof on concept experiement on how the Cheri-colocation feature can be used for tracing syscalls. **There is no plan to push this request as a feature to the CTSRD/CheriBSD repository**. 
+
 # CheriBSD
 
 CheriBSD extends FreeBSD to implement memory protection and
