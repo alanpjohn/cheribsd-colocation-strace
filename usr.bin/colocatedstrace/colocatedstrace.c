@@ -184,11 +184,8 @@ main(int argc, char **argv)
 			continue;
 		}
 
-		if (vflag) {
-			printf("%s: op %d, len %zd from pid %d -> pid %d%s\n",
-			    getprogname(), in.op, in.len, pid, getpid(), kflag ? " (slow)" : "");
-		}
-
+		printf("%s: syscall captured: %d on process %d\n", getprogname(), in.op, pid);
+	
 		answerback(&outbuf.answerback);
 
 		if (vflag) {
